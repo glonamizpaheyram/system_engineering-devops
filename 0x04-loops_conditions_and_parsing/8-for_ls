@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
-# This script lists files showing only names after the first dash
-for f in *-*; do echo "${f#*-}"; done
+# List non-hidden files, showing name after first dash
+for file in *
+do
+    name="${file#*-}"
+    echo "$name"
+done
